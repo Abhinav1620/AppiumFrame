@@ -21,3 +21,18 @@ Feature: E2E testcase for checking out a product
     Examples:
       | username        | password |
       | bob@example.com | 10203040 |
+
+
+  Scenario Outline: Check that user is able to do checkout for multiple products
+    When user select his products
+    And add it into his shopping cart
+    Then User should be asked for login to proceed ahead with the checkout
+    And after entering his correct "<username>" and correct "<password>"
+    Then User should be able to logout after his checkout.
+    Examples:
+      | username        | password |
+      | bob@example.com | 10203040 |
+
+    Scenario: Check that user is able to give review star to his product.
+      When User selects his product
+      Then User should be able to give review star to his product

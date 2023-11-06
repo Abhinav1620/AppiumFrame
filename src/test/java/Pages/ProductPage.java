@@ -24,6 +24,9 @@ public class ProductPage {
     By sauceLabsBackpack = AppiumBy.xpath("(//android.widget.TextView[@content-desc=\"store item text\"])[1]");
     By sauceLabsBikeLight = AppiumBy.xpath("(//android.widget.TextView[@content-desc=\"store item text\"])[2]");
     By sauceLabsBoltTShirt = AppiumBy.xpath("(//android.widget.TextView[@content-desc=\"store item text\"])[3]");
+    By fiveStar = AppiumBy.accessibilityId("review star 5");
+    By closeModalButton = AppiumBy.accessibilityId("Close Modal button");
+    By thanksText = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView");
 
 
     public WebElement sauceLabsBackpack(){
@@ -36,5 +39,14 @@ public class ProductPage {
 
     public WebElement sauceLabsBoltTShirt(){
         return wait.until(ExpectedConditions.visibilityOfElementLocated(sauceLabsBoltTShirt));
+    }
+    public WebElement fiveStar(){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(fiveStar));
+    }
+    public WebElement closeModalButton(){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(closeModalButton));
+    }
+    public String text(){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(thanksText)).getText();
     }
 }

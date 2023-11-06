@@ -23,12 +23,13 @@ public class LoginReq extends ElementActions {
     @When("^User adds his product into the cart$")
     public void userAddsHisProductIntoTheCart() {
         click(page.sauceLabsBoltTShirt());
+        click(elements.addToCartButton());
+        click(elements.cartBadge());
     }
 
     @Then("User should be asked for login to proceed ahead with the checkout")
     public void userShouldBeAskedForLoginToProceedAheadWithTheCheckout() {
-        click(elements.addToCartButton());
-        click(elements.cartBadge());
+
         click(elements.proceedToCheckoutButton());
     }
 
