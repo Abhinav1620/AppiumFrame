@@ -21,4 +21,3 @@ Feature: check feature cart functionality
     Examples:
       | username        | password |
       | bob@example.com | 10203040 |
-
