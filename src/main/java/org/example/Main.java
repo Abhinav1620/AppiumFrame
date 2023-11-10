@@ -28,6 +28,5 @@ public class Main {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//android.widget.TextView[@content-desc=\"store item text\"])[3]"))).click();
     }
 }

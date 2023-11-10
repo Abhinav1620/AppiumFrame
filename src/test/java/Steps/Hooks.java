@@ -16,7 +16,7 @@ public class Hooks {
     @Before
     public void startUp() throws MalformedURLException {
         UiAutomator2Options options = new UiAutomator2Options();
-        options.setApp("C:\\Users\\akumar3\\Downloads\\new\\SeleniumFrameworkDesign\\AppiumFrameWork\\Android-MyDemoAppRN.1.3.0.build-244.apk");
+        options.setApp("C:\\Users\\akumar3\\Documents\\DoNotDelete\\AppiumFrame\\Android-MyDemoAppRN.1.3.0.build-244.apk");
         options.setDeviceName("Pixel 3 API 28");
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName(MobilePlatform.ANDROID);

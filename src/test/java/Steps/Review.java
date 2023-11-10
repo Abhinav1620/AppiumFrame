@@ -15,8 +15,8 @@ public class Review extends ElementActions {
     }
 
     @Then("User should be able to give review star to his product")
-    public void userShouldBeAbleToGiveReviewStarToHisProduct() {
+    public void userShouldBeAbleToGiveReviewStarToHisProduct() throws InterruptedException {
         click(page.fiveStar());
-        click(page.closeModalButton());
+        Thread.sleep(3000);
     }
 }
