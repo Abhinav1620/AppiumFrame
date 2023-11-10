@@ -25,7 +25,7 @@ public class CommonElements {
     By proceedToCheckoutButton = AppiumBy.accessibilityId("Proceed To Checkout button");
     By removeItem = AppiumBy.accessibilityId("remove item");
     By removeText = AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"container header\"]/android.widget.TextView");
-    By removeText2 = AppiumBy.xpath("//android.widget.ScrollView[@content-desc=\"cart screen\"]/android.view.ViewGroup/android.widget.TextView");
+
 
     By multipleRemove = AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"remove item\"]");
     By containsHeaders = AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"container header\"]/android.widget.TextView");
@@ -46,13 +46,9 @@ public class CommonElements {
     public WebElement removeItem(){
         return wait.until(ExpectedConditions.visibilityOfElementLocated(removeItem));
     }
-    public WebElement removeText(){
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(removeText));
+    public String removeText(){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(removeText)).getText();
     }
-    public WebElement removeText2(){
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(removeText2));
-    }
-
 
     public List<WebElement> multipleRemove(){
         return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(multipleRemove));
